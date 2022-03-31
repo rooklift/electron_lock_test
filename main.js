@@ -1,21 +1,16 @@
 "use strict";
 
 const electron = require("electron");
+const path = require("path");
+
+let win;
 
 if (!electron.app.requestSingleInstanceLock()) {
-
 	console.log("Lock Test is apparently already running. Shutting down this instance.");
 	electron.app.quit();
-
 } else {
-
-	let n = 0;
-	
-	function all_is_ok() {
-		console.log(`Everything is OK... (${++n})`);
-		setTimeout(all_is_ok, 2000);
-	}
-
-	all_is_ok();
-
+	electron.app.whenReady().then(() => {
+		win = new electron.BrowserWindow();
+		win.loadFile(path.join(__dirname, "renderer.html"));
+	});
 }

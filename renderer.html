@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Electron Lock Test</title>
+</head>
+<body>
+
+	<p id="content"></p>
+
+	<script>
+
+		let n = 0;
+		function all_is_ok() {
+			let element = document.getElementById("content");
+			element.innerHTML = `Everything seems OK... (${++n})`;
+			setTimeout(all_is_ok, 1000);
+		}
+		all_is_ok();
+		
+	</script>
+
+</body>
+</html>
