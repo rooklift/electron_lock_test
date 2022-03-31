@@ -1,4 +1,4 @@
-To reproduce:
+Reproduction repo for [Electron 33566](https://github.com/electron/electron/issues/33566):
 
 * Build this app for Electron 17 and Electron 18.
 * You can easily do this manually by extracting Electron and adding the folder `resources/app` then placing these files inside there.
