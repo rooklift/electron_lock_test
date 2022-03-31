@@ -5,4 +5,4 @@ To reproduce:
 * Run the v18 version of this app.
 * While it is running, run the v17 version.
 
-Now, the v18 version will crash in the Main process.
+Now, the v18 version will crash in the Main process. (Tested on Windows 10.)
