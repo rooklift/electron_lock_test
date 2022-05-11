@@ -1,5 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head><title>Electron Lock Test</title></head>
-<body></body>
+<body>
+	
+	<p>Counter to prove renderer continues to run: <span id="counter"></span></p>
+
+<script>
+
+	let n = 1;
+	function foo() {
+		document.getElementById("counter").innerHTML = `${n++}`;
+		setTimeout(foo, 1000);
+	}
+	foo();
+
+</script>
+
+</body>
 </html>
